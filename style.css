@@ -1,0 +1,75 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+h1 {
+  color: black;
+  font-family: Raleway;
+  text-align: center;
+  z-index: 1;
+  width: 650px;
+  height: 80%;
+  z-index: 2;
+  white-space: pre-wrap;
+
+  font-size: 110px;
+}
+
+h1::after {
+  content: "*";
+}
+h1:hover {
+  color:#4c4c4c;
+
+}
+
+h1:hover::before {
+  font-family: Raleway;
+  color: black;
+  content: " На самом деле нет.\A Важнее &mdash; научиться ошибаться. ";
+  white-space: pre-wrap;
+  position: absolute;
+  height: 15%;
+  font-size: 2vw;
+  border: 2px solid black;
+  border-bottom: 8px solid black;
+  background-color: white;
+  border-radius: 20px;
+  top: 20%;
+  left: 50%;
+  width: 50%;
+  text-align: left;
+  padding: 10px;
+  
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+}
+h1:hover + video{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0.4;
+}
